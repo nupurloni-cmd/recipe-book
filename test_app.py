@@ -43,3 +43,5 @@ def test_invalid_input_rejected():
         data={"name": "", "ingredient": "Salt", "category": "Starters"},
     )
     assert response.status_code == 400  # Bad Request
+ 
+# Validated unit test suite 
