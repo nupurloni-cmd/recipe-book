@@ -12,7 +12,7 @@ def client():
 def test_health():
     c = client()
     response = c.get("/health")
-    assert response.status_code == 400
+    assert response.status_code == 200
     assert response.json["status"] == "ok"
 
 
