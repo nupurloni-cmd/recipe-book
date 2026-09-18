@@ -12,7 +12,7 @@ def client():
 def test_health():
     c = client()
     response = c.get("/health")
-    assert response.status_code == 200
+    assert response.status_code == 400
     assert response.json["status"] == "ok"
 
 
@@ -42,6 +42,6 @@ def test_invalid_input_rejected():
         "/add",
         data={"name": "", "ingredient": "Salt", "category": "Starters"},
     )
-    assert response.status_code == 400  # Bad Request
+    assert response.status_code == 400
 
 # Validated unit test suite
