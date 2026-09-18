@@ -27,7 +27,8 @@ jobs:
           pip install pytest flake8
 
       - name: Code Quality Checks (flake8)
-        run: flake8 . --max-line-length=120 --exclude=venv,.venv --ignore=W291,W293
+        run: |
+          flake8 . --max-line-length=120 --exclude=venv,.venv --ignore=W291,W293
 
       - name: Run Unit Tests (pytest)
         run: |
